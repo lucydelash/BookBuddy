@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <h1>
-        <img src="https://e7.pngegg.com/pngimages/465/30/png-clipart-paper-clip-computer-icons-free-content-free-parchment-background-white-shoe.png" alt='Quill Logo' />
+        <img src="" alt='' />
         Library App
       </h1>
 
