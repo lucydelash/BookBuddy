@@ -1,12 +1,13 @@
 body {
   font-family: Georgia, serif;
-  background-color: #f8f8f8;
+  background-image: url("https://github.com/lucydelash/BookBuddy/blob/main/Unit3.BookBuddy.Starter/src/components/d2yqzjd-3c88cd5c-8d4e-489f-94ab-4b400534a164-Photoroom.png-Photoroom.png?raw=true");
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
 
 #logo-image {
-  width: 30px;
+  width: 70px;
   margin-right: 10px;
 }
 
@@ -14,6 +15,8 @@ h1 {
   display: flex;
   justify-content: center;
   font-family: cursive;
+  font-size: 60px;
+  margin-top: 60px;
 }
 
 p {
@@ -25,23 +28,27 @@ ul {
   flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
-  padding: 5px;
-  margin: 10px;
+  font-size: large;
+  font-family: cursive;
 }
 
 label {
-  font-family: cursive;
-  padding: 5px;
-  margin: 10px;  
+  display: flex;
+  justify-content: center;
+  font-family: cursive;  
 }
 
 h2 {
+  display: flex;
+  justify-content: center;
   font-family: cursive;
   padding: 5px;
   margin: 10px; 
 }
 
 button {
+  display: flex;
+  justify-content: center;
   font-family: cursive;
   font-size: larger;
   padding: 5px;
@@ -52,4 +59,9 @@ button {
 
 button:hover {
   background-color: blueviolet;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
 }

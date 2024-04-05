@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Register({ handleAuthSuccess, apiUrl }) {
+function Register({ handleAuthSuccess, API_URL }) {
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -19,7 +19,7 @@ function Register({ handleAuthSuccess, apiUrl }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${apiUrl}/api/users/register`, { // Use apiUrl
+      const response = await fetch(`${API_URL}/api/users/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

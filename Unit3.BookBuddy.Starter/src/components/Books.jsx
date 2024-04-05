@@ -4,7 +4,7 @@ function Books({ apiUrl }) {
   const [books, setBooks] = useState([]); // Ensure books is initialized as an empty array
 
   useEffect(() => {
-    fetch(`${apiUrl}/api/books`)
+    fetch(`${API_URL}/api/books`)
       .then(response => response.json())
       .then(data => setBooks(data))
       .catch(error => console.error('Error fetching books:', error));

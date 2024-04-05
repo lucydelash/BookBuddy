@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-function SingleBook({ bookId, apiUrl }) {
+function SingleBook({ bookId, API_URL }) {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    fetch(`${apiUrl}/api/books/${bookId}`) // Use apiUrl
+    fetch(`${API_URL}/api/books/${bookId}`)
       .then(response => response.json())
       .then(data => setBook(data))
       .catch(error => console.error('Error fetching book:', error));
-  }, [bookId, apiUrl]); // Include bookId and apiUrl in dependency array
+  }, [bookId, API_URL]);
 
   if (!book) {
     return <p>Loading...</p>;
