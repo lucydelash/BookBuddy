@@ -26,7 +26,8 @@ function App() {
   return (
     <>
       <h1>
-        <img src="" alt='' />
+        <img id="bookIcon" src="https://github.com/lucydelash/BookBuddy/blob/main/Unit3.BookBuddy.Starter/src/components/vecteezy_libro_1200100.png?raw=true"
+        alt='icon of an open book' />
         Library App
       </h1>
 
