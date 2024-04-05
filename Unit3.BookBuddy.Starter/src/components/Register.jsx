@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-function Register({ handleAuthSuccess }) {
+function Register({ handleAuthSuccess, apiUrl }) {
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -10,7 +10,7 @@ function Register({ handleAuthSuccess }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setFormData(prevData => ({
       ...prevData,
       [name]: value,
     }));
@@ -19,7 +19,7 @@ function Register({ handleAuthSuccess }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/users/register', {
+      const response = await fetch(`${apiUrl}/api/users/register`, { // Use apiUrl
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,8 +44,8 @@ function Register({ handleAuthSuccess }) {
         <label>
           First Name:
           <input
-            type='text'
-            name='firstname'
+            type="text"
+            name="firstname"
             value={formData.firstname}
             onChange={handleChange}
           />
@@ -54,8 +54,8 @@ function Register({ handleAuthSuccess }) {
         <label>
           Last Name:
           <input
-            type='text'
-            name='lastname'
+            type="text"
+            name="lastname"
             value={formData.lastname}
             onChange={handleChange}
           />
@@ -64,8 +64,8 @@ function Register({ handleAuthSuccess }) {
         <label>
           Email:
           <input
-            type='email'
-            name='email'
+            type="email"
+            name="email"
             value={formData.email}
             onChange={handleChange}
           />
@@ -74,14 +74,14 @@ function Register({ handleAuthSuccess }) {
         <label>
           Password:
           <input
-            type='password'
-            name='password'
+            type="password"
+            name="password"
             value={formData.password}
             onChange={handleChange}
           />
         </label>
         <br />
-        <button type='submit'>Register</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );

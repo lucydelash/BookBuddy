@@ -11,9 +11,45 @@ body {
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   font-family: cursive;
 }
 
 p {
   font-family: cursive;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 5px;
+  margin: 10px;
+}
+
+label {
+  font-family: cursive;
+  padding: 5px;
+  margin: 10px;  
+}
+
+h2 {
+  font-family: cursive;
+  padding: 5px;
+  margin: 10px; 
+}
+
+button {
+  font-family: cursive;
+  font-size: larger;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 50%;
+  width: 100px;
+}
+
+button:hover {
+  background-color: blueviolet;
 }
